@@ -1,0 +1,68 @@
+{
+  "expenses": [
+    {
+      "concepto": "Supermercado",
+      "categoria": "comida",
+      "monto": 18500,
+      "fecha": "2025-12-05",
+      "pagado": true,
+      "id": "1"
+    },
+    {
+      "concepto": "SUBESS",
+      "categoria": "transporte",
+      "monto": 2500,
+      "fecha": "2025-12-06",
+      "pagado": true,
+      "id": "2"
+    },
+    {
+      "id": "3",
+      "concepto": "Farmacia",
+      "categoria": "salud",
+      "monto": 7300,
+      "fecha": "2025-12-08",
+      "pagado": false
+    },
+    {
+      "id": "4",
+      "concepto": "Cine",
+      "categoria": "ocio",
+      "monto": 9000,
+      "fecha": "2025-12-10",
+      "pagado": true
+    },
+    {
+      "id": "5",
+      "concepto": "Almuerzo",
+      "categoria": "comida",
+      "monto": 6200,
+      "fecha": "2025-12-18",
+      "pagado": false
+    },
+    {
+      "id": "a159",
+      "concepto": "TEST 0",
+      "categoria": "salud",
+      "monto": 900,
+      "fecha": "2025-12-19T16:33:00",
+      "pagado": false
+    },
+    {
+      "id": "e210",
+      "concepto": "TESt 4",
+      "categoria": "ocio",
+      "monto": 890,
+      "fecha": "2025-12-30T16:41:00",
+      "pagado": false
+    },
+    {
+      "id": "60f2",
+      "concepto": "TEST 5",
+      "categoria": "comida",
+      "monto": 70,
+      "fecha": "2025-12-26T16:45:00",
+      "pagado": true
+    }
+  ]
+}

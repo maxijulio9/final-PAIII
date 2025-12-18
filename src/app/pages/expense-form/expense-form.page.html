@@ -1,0 +1,75 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>{{ isEditMode ? 'Actualizar Gasto' : 'Agregar Gasto'  }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">{{ isEditMode ? 'Actualizar Gasto' : 'Agregar Gasto'  }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    <form [formGroup]="form">
+      <ion-item>
+        <ion-label position="floating">Concepto</ion-label>
+        <ion-input formControlName="concepto" type="text"></ion-input>
+      </ion-item>
+      @if (form.get("concepto")?.invalid && form.get("concepto")?.touched) {
+        <p style="color: red; background-color: rgb(98, 3, 3); width: 60%;">El concepto es obligatorio.</p>
+      }
+
+      <ion-item>
+        <ion-label position="floating">Categoría</ion-label>
+        <ion-select formControlName="categoria">
+          <ion-select-option value="comida">Comida</ion-select-option>
+          <ion-select-option value="transporte">Transporte</ion-select-option>
+          <ion-select-option value="salud">Salud</ion-select-option>
+          <ion-select-option value="ocio">Ocio</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Monto</ion-label>
+        <ion-input type="number" formControlName="monto" type="number"></ion-input>
+      </ion-item>
+      @if ((form.get("monto")?.invalid && form.get("monto")?.touched) || (form.get("monto")?.value === 0 && form.get("monto")?.touched)) {
+        <p style="color: red; background-color: rgb(98, 3, 3); width: 60%;">El monto es obligatorio y no puede ser ero</p>
+      }
+
+      <ion-item>
+        <ion-label position="floating">Fecha</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY" inputFormat="DD/MM/YYYY" formControlName="fecha"></ion-datetime>
+      </ion-item>
+      @if (form.get("fecha")?.invalid && form.get("fecha")?.touched ) {
+        <p style="color: red; background-color: rgb(98, 3, 3); width: 60%;">La fecha es obligatoria.</p>
+      }
+      <ion-item>
+        <ion-label>Pagado</ion-label>
+        <ion-select formControlName="pagado">
+          <ion-select-option [value]="true">Sí</ion-select-option>
+          <ion-select-option [value]="false">No</ion-select-option> 
+        </ion-select>
+      </ion-item>
+
+      <ion-button expand="full" (click)="save()" [disabled]="form.invalid">
+        {{ isEditMode ? 'Actualizar Gasto' : 'Agregar Gasto'  }}
+      </ion-button>
+
+    </form>
+  </div>
+
+
+
+  <ion-toast
+    [isOpen]="toastVisible"
+    message="{{ toastMessage }}"
+    duration="2000"
+    color="success"
+    position="bottom">  
+    (didDismiss)="toastVisible = false">
+  </ion-toast>
+</ion-content>

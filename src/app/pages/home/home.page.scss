@@ -1,0 +1,59 @@
+ion-item{
+    margin: 10px;
+    border-radius: 8px;
+    color: #f7f2f2;
+}
+
+.comida{
+    --background: #fa2929 !important;
+    box-shadow: 3px 2px 20px #ff1a17;
+    margin-top: 20px;
+    h2{
+        color: #fff;
+        font-size: 25px;
+    }
+    p{
+        color: rgb(255, 255, 255);
+    }
+  }
+  
+  .transporte{
+    --background: #e25904 !important;
+    box-shadow: 2px 2px 20px #ff7710;
+    margin-top: 20px;
+    h2{
+        color: #fff;
+        font-size: 25px;
+    }
+    p{
+        color: rgb(255, 255, 255);
+    }
+  }
+  
+  .salud{
+    --background: #31a707 !important;
+    box-shadow: 2px 2px 20px #02c102    ;
+    margin-top: 20px;
+    h2{
+        color: #fff;
+        font-size: 25px;
+    }
+    p{
+        color: rgb(255, 255, 255);
+    }
+  }
+  
+  .ocio{
+    color: black;
+    --background: #f7f72a !important;
+    box-shadow: 2px 2px 20px #f7f70a;
+    border: px solid #9f9f06;
+    margin-top: 20px;
+    h2{
+        color: #3e3d3d;
+        font-size: 25px;
+    }
+    p{
+        color: black;
+    }
+}
