@@ -1,0 +1,7 @@
+{
+  "name": "MiBilletera",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
